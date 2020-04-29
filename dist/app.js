@@ -6,7 +6,7 @@ require('express-async-errors');
 
 var _routes = require('./routes'); var _routes2 = _interopRequireDefault(_routes);
 
-require('./database');
+// import './database';
 
 class App {
   constructor() {
