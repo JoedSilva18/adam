@@ -16,11 +16,11 @@ class WatsonAssistantController {
     });
 
     const { result } = await assistant.createSession({
-      assistantId: 'cc32de7d-e2c6-45f8-b8c6-b89090b866ff',
+      assistantId: 'a7f1bb02-970d-4dd7-9e22-c1206ede4d02',
     });
 
     const resu = await assistant.message({
-      assistantId: 'cc32de7d-e2c6-45f8-b8c6-b89090b866ff',
+      assistantId: 'a7f1bb02-970d-4dd7-9e22-c1206ede4d02',
       sessionId: result.session_id,
       input: {
         message_type: 'text',

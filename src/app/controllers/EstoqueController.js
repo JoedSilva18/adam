@@ -1,7 +1,10 @@
 class EstoqueController {
-  async index(req, res) {
+  // Funcao busca no banco se o produto ainda tem em estoque
+  async show(req, res) {
+    const { productId, userId } = req.body;
+
     return res.status(200).json({
-      result: 'Ainda temos o produto em nosso estoque',
+      result: `Ola, tudo bem? Ainda temos o produto em estoque mas não sabemos por quanto tempo! ${productId} e ${userId}`,
     });
   }
 }

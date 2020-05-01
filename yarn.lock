@@ -1638,7 +1638,7 @@ ibm-cloud-sdk-core@^2.0.3:
     semver "^6.2.0"
     ts-jest "^24.2.0"
 
-ibm-watson@^5.4.0:
+ibm-watson@^5.5.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/ibm-watson/-/ibm-watson-5.5.0.tgz#3c15369c19efbc6bf1ef93ce9da5b8eb9ef8edca"
   integrity sha512-gcijKSFTOMLcjEnSpeUa4/31naeMSZsz8t/wYNrR5c8gp1VN9LbJ3vhn3nFislfLYopTkNnWzya7w8oMhW4SGg==
