@@ -5,7 +5,7 @@ var _NLController = require('./app/controllers/NLController'); var _NLController
 
 const routes = new (0, _express.Router)();
 
-routes.get('/findEstoque', _EstoqueController2.default.index);
+routes.get('/findEstoque', _EstoqueController2.default.show);
 routes.get('/sendMessage/:productId', _WatsonAssistantController2.default.index);
 routes.get('/findEntity/', _NLController2.default.index);
 

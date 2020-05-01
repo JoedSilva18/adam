@@ -5,7 +5,7 @@ import NLController from './app/controllers/NLController';
 
 const routes = new Router();
 
-routes.get('/findEstoque', EstoqueController.index);
+routes.get('/findEstoque', EstoqueController.show);
 routes.get('/sendMessage/:productId', WatsonAssistantController.index);
 routes.get('/findEntity/', NLController.index);
 
