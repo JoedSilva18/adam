@@ -5,7 +5,7 @@ class ProductController {
     const { atributos, productId } = req.params;
 
     const product = await Product.findOne({
-      _id: productId,
+      productId,
     });
 
     if (product) {
