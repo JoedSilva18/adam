@@ -12,7 +12,7 @@ class ProductController {
       product.attributes.map(attr => {
         if (attr.attrName === atributos) {
           return res.status(200).json({
-            result: `Olá, tudo bem? ${attr.attrName}:${attr.value}. Só temos disponível o que está descrito no anúncio. Aguaramos sua compra.`,
+            result: `Olá, tudo bem? Segundo as informações presentes no anúncio ${attr.attrName}:${attr.value}. Só temos disponível o que está descrito no anúncio. Aguaramos sua compra.`,
           });
         }
       });
