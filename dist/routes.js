@@ -16,7 +16,7 @@ routes.get(
 );
 routes.get('/findEntity/', _NLController2.default.index);
 routes.get(
-  '/checkProduct/user/:userId/product/:productId',
+  '/checkProduct/user/:userId/product/:productId/atributo/:atributo',
   _ProductController2.default.show
 );
 

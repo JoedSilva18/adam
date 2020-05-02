@@ -1,9 +1,9 @@
 class ProductController {
   async show(req, res) {
-    const { atributos } = req.body;
+    const { atributos } = req.params;
 
     return res.status(200).json({
-      result: 'atributos',
+      result: atributos,
     });
   }
 }
