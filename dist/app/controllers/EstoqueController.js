@@ -6,9 +6,16 @@
     const [, userId_] = userId.split(':');
 
     // TODO buscar a disponibilidade do produto baseado do productId_ e no userId_
+    const estoque = 10;
+
+    if (estoque > 0) {
+      return res.status(200).json({
+        result: `Ola, tudo bem? Ainda temos o produto em estoque mas não sabemos por quanto tempo!`,
+      });
+    }
 
     return res.status(200).json({
-      result: `Ola, tudo bem? Ainda temos o produto em estoque mas não sabemos por quanto tempo!`,
+      result: `Infelizmente nosso estoque acabou mas em breve teremos mais produtos!`,
     });
   }
 }
