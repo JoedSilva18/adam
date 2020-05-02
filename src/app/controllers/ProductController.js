@@ -16,7 +16,7 @@ class ProductController {
 
     const analyzeParams = {
       text:
-        'Marca: Arno Linha: Silence Force Modelo: VF41 Tipo de ventilador: De mesa',
+        'Voltagem: 110V Marca: Arno Linha: Silence Force Modelo: VF41 Tipo de ventilador: De mesa',
       language: 'pt',
       features: {
         entities: {
@@ -32,12 +32,12 @@ class ProductController {
     entities.map(entity => {
       if (entity.type === atributos) {
         return res.status(200).json({
-          result: 'Informação no anuncio',
+          result: `Olá, tudo bem? ${entity.text}`,
         });
       }
     });
 
-    return res.status(200).json({
+    return res.status(400).json({
       result: 'Não achei',
     });
   }
