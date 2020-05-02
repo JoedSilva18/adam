@@ -8,7 +8,7 @@ class ProductController {
       productId,
     });
 
-    /*if (product) {
+    if (product) {
       product.attributes.map(attr => {
         if (attr.attrName === atributos) {
           return res.status(200).json({
@@ -16,10 +16,10 @@ class ProductController {
           });
         }
       });
-    } */
+    }
 
     return res.status(200).json({
-      result: product.price,
+      result: atributos,
     });
   }
 
