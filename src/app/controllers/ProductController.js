@@ -3,7 +3,7 @@ class ProductController {
     const { atributos } = req.body;
 
     return res.status(200).json({
-      result: atributos,
+      result: 'atributos',
     });
   }
 }
