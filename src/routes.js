@@ -28,4 +28,6 @@ routes.get(
   AnalyticsController.index
 );
 
+routes.post('/storeProduct', ProductController.store);
+
 export default routes;

@@ -28,4 +28,6 @@ routes.get(
   _AnalyticsController2.default.index
 );
 
+routes.post('/storeProduct', _ProductController2.default.store);
+
 exports. default = routes;

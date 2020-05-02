@@ -1,24 +1,31 @@
-"use strict"; function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }Object.defineProperty(exports, "__esModule", {value: true});var _WKS = require('../lib/WKS'); var _WKS2 = _interopRequireDefault(_WKS);
+"use strict"; function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }Object.defineProperty(exports, "__esModule", {value: true});var _Product = require('../schemas/Product'); var _Product2 = _interopRequireDefault(_Product);
 
 class ProductController {
   async show(req, res) {
-    const { atributos } = req.params;
+    const { atributos, productId } = req.params;
 
-    const result = await _WKS2.default.getService();
-
-    const { entities } = result.result;
-
-    entities.map(entity => {
-      if (entity.type === atributos) {
-        return res.status(200).json({
-          result: `Olá, tudo bem? ${entity.text}`,
-        });
-      }
+    const product = await _Product2.default.findOne({
+      _id: productId,
     });
+
+    if (product) {
+      product.attributes.map(attr => {
+        if (attr.attrName === atributos) {
+          return res.status(200).json({
+            result: `Olá, tudo bem? ${attr.attrName}:${attr.value}`,
+          });
+        }
+      });
+    }
 
     return res.status(400).json({
       result: 'Não achei',
     });
+  }
+
+  async store(req, res) {
+    const product = await _Product2.default.create(req.body);
+    return res.status(200).json(product);
   }
 }
 
