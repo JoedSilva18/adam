@@ -14,7 +14,7 @@ class NLController {
 
     const analyzeParams = {
       text:
-        'Marca: Arno Linha: Silence Force Modelo: VF41 Tipo de ventilador: De mesa',
+        'Voltagem: 110V Marca: Arno Linha: Silence Force Modelo: VF41 Tipo de ventilador: De mesa',
       language: 'pt',
       features: {
         entities: {
