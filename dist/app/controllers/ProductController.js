@@ -4,11 +4,11 @@ class ProductController {
   async show(req, res) {
     const { atributos, productId } = req.params;
 
-    /*const product = await Product.findOne({
+    const product = await _Product2.default.findOne({
       productId,
     });
 
-    if (product) {
+    /*if (product) {
       product.attributes.map(attr => {
         if (attr.attrName === atributos) {
           return res.status(200).json({
@@ -19,7 +19,7 @@ class ProductController {
     } */
 
     return res.status(200).json({
-      result: productId,
+      result: product.price,
     });
   }
 
