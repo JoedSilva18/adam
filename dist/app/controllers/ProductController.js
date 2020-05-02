@@ -30,7 +30,7 @@ class ProductController {
     const { entities } = result.result;
 
     entities.map(entity => {
-      if (entity.type === 'atributos') {
+      if (entity.type === atributos) {
         return res.status(200).json({
           result: 'Informação no anuncio',
         });
