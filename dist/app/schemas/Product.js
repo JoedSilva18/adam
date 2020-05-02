@@ -7,7 +7,7 @@ const ProductSchema = new _mongoose2.default.Schema(
       required: true,
     },
     productId: {
-      type: Number,
+      type: String,
       required: true,
     },
     productName: {

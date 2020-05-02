@@ -4,7 +4,7 @@ class ProductController {
   async show(req, res) {
     const { atributos, productId } = req.params;
 
-    const product = await Product.findOne({
+    /*const product = await Product.findOne({
       productId,
     });
 
@@ -16,10 +16,10 @@ class ProductController {
           });
         }
       });
-    }
+    } */
 
-    return res.status(400).json({
-      result: 'Não achei',
+    return res.status(200).json({
+      result: productId,
     });
   }
 
