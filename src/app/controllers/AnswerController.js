@@ -5,7 +5,7 @@ class AnswerController {
     const { productId, input } = req.params;
 
     const question = await Questions.findOne({
-      productId,
+      productId: `productId:${productId}`,
       question: input,
     });
 
