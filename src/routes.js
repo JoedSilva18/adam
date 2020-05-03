@@ -44,4 +44,9 @@ routes.post(
   AnswerController.checkQuestion
 );
 
+routes.post(
+  '/answerQuestion/product/:productId/question/:questionId',
+  AnswerController.store
+);
+
 export default routes;
