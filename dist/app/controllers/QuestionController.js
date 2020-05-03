@@ -2,9 +2,15 @@
 
 class QuestionController {
   async store(req, res) {
-    const question = await _Questions2.default.create(req.body);
+    const { productId, userId } = req.params;
+    const { question } = req.body;
+    const questionSave = await _Questions2.default.create({
+      productId,
+      userId,
+      question,
+    });
 
-    res.status(200).json(question);
+    res.status(200).json(questionSave);
   }
 
   async index(req, res) {
