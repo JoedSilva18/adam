@@ -3,6 +3,8 @@ import EstoqueController from './app/controllers/EstoqueController';
 import WatsonAssistantController from './app/controllers/WatsonAssistantController';
 import ProductController from './app/controllers/ProductController';
 import AnalyticsController from './app/controllers/AnalyticsController';
+import QuestionController from './app/controllers/QuestionController';
+import AnswerController from './app/controllers/AnswerController';
 
 const routes = new Router();
 
@@ -29,5 +31,15 @@ routes.get(
 );
 
 routes.post('/storeProduct', ProductController.store);
+
+routes.post(
+  '/storeQuestion/user/:userId/product/:productId',
+  QuestionController.store
+);
+
+routes.get(
+  '/storeQuestion/product/:productId/question/:input',
+  AnswerController.show
+);
 
 export default routes;

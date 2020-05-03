@@ -1,0 +1,16 @@
+"use strict"; function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }Object.defineProperty(exports, "__esModule", {value: true});var _Questions = require('../schemas/Questions'); var _Questions2 = _interopRequireDefault(_Questions);
+
+class AnswerController {
+  async show(req, res) {
+    const { productId, input } = req.params;
+
+    const question = await _Questions2.default.findOne({
+      productId,
+      question: input,
+    });
+
+    return res.status(200).json(question);
+  }
+}
+
+exports. default = new AnswerController();
