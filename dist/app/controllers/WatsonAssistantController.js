@@ -31,6 +31,7 @@ class WatsonAssistantController {
 
     return res.status(200).json({
       answer: resu.result.output.generic[0].text,
+      date: new Date(),
     });
   }
 }
