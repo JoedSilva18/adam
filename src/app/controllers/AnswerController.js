@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 import Questions from '../schemas/Questions';
 
 class AnswerController {
@@ -19,6 +20,23 @@ class AnswerController {
     return res.status(200).json({
       result: '',
     });
+  }
+
+  async store(req, res) {
+    const { questionId, productId } = req.params;
+    const { answer } = req.body;
+
+    const question = await Questions.findOne({
+      _id: mongoose.Types.ObjectId(questionId),
+    });
+
+    if (question) {
+      await question.update({
+        answer,
+      });
+    }
+
+    return res.status(200).json(question);
   }
 }
 
