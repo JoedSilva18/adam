@@ -30,11 +30,7 @@ class WatsonAssistantController {
     });
 
     return res.status(200).json({
-      productId,
-      userId,
-      question,
       answer: resu.result.output.generic[0].text,
-      date: new Date(),
     });
   }
 }
