@@ -8,45 +8,70 @@ var _AnswerController = require('./app/controllers/AnswerController'); var _Answ
 
 const routes = new (0, _express.Router)();
 
-routes.get(
-  '/findEstoque/user/:userId/product/:productId',
-  _EstoqueController2.default.show
-);
-routes.get(
-  '/sendMessage/user/:userId/product/:productId',
-  _WatsonAssistantController2.default.index
-);
-routes.get(
-  '/checkProduct/user/:userId/product/:productId/atributos/:atributos',
-  _ProductController2.default.show
-);
-routes.post(
-  '/storeAnalytics/user/:userId/product/:productId/atributos/:atributos',
-  _AnalyticsController2.default.store
-);
+/* Rotas simulando o marketplace */
 
-routes.get(
-  '/storeAnalytics/user/:userId/product/:productId',
-  _AnalyticsController2.default.index
-);
-
-routes.post('/storeProduct', _ProductController2.default.store);
-
+// Salva uma pergunta no banco
 routes.post(
   '/storeQuestion/user/:userId/product/:productId',
   _QuestionController2.default.store
 );
 
+// Lista todas as questoes baseadas no id do produto
 routes.get('/getQuestions/product/:productId', _QuestionController2.default.index);
 
+/* Rotas que a Olist acessaria */
+
+// Envia uma pergunta para ser analisada pelo sistema
+// Verifica se ja tem uma resposta automatica para ela
+routes.post(
+  '/sendMessage/user/:userId/product/:productId',
+  _WatsonAssistantController2.default.store
+);
+
+// Rota para responder uma pergunta
+routes.post(
+  '/answerQuestion/product/:productId/question/:questionId',
+  _AnswerController2.default.store
+);
+
+// Exibe os dados das perguntas mais efetuadas
+// (ex: perguntas sobre formas de pagamento, envio de nota fiscal, etc)
+routes.get(
+  '/storeAnalytics/user/:userId/product/:productId',
+  _AnalyticsController2.default.index
+);
+
+/* Rotas internas do sistema  */
+
+// Busca a disponibilidade no estoque baseado no id do produto
+routes.get(
+  '/findEstoque/user/:userId/product/:productId',
+  _EstoqueController2.default.show
+);
+
+// Verifica os atributos do produto (ex: cor, tamanho, bateria)
+// Verifica se o atributo procurado esta na lista de atributos do produto
+routes.get(
+  '/checkProduct/user/:userId/product/:productId/atributos/:atributos',
+  _ProductController2.default.show
+);
+
+// Salva os tipos de perguntas para gerar um relatorio com as perguntas mais
+// efetuadas. (ex: perguntas sobre formas de pagamento, envio de nota fiscal, etc)
+routes.post(
+  '/storeAnalytics/user/:userId/product/:productId/atributos/:atributos',
+  _AnalyticsController2.default.store
+);
+
+// Verifica se ja tem uma questao parecida salva no banco
 routes.post(
   '/checkQuestion/product/:productId',
   _AnswerController2.default.checkQuestion
 );
 
-routes.post(
-  '/answerQuestion/product/:productId/question/:questionId',
-  _AnswerController2.default.store
-);
+/* Rota para testes do hackathon(ignorar) */
+
+// Salva um produto (Rota apenas para testes do hackathon)
+routes.post('/storeProduct', _ProductController2.default.store);
 
 exports. default = routes;

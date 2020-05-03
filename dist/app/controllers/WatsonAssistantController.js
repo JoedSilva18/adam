@@ -1,7 +1,7 @@
 "use strict"; function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }Object.defineProperty(exports, "__esModule", {value: true});var _WatsonAssistant = require('../lib/WatsonAssistant'); var _WatsonAssistant2 = _interopRequireDefault(_WatsonAssistant);
 
 class WatsonAssistantController {
-  async index(req, res) {
+  async store(req, res) {
     const { productId, userId } = req.params;
     const { question } = req.body;
 
