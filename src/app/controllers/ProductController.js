@@ -18,7 +18,7 @@ class ProductController {
       });
     }
 
-    return res.status(400).json({
+    return res.status(200).json({
       result: '',
     });
   }
