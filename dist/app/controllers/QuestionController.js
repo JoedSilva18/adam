@@ -5,7 +5,7 @@ class QuestionController {
     const { productId, userId } = req.params;
     const { question } = req.body;
     const questionSave = await _Questions2.default.create({
-      productId,
+      productId: `productId:${productId}`,
       userId,
       question,
     });
