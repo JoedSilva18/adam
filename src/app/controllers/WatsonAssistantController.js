@@ -25,14 +25,14 @@ class WatsonAssistantController {
       sessionId: result.session_id,
       input: {
         message_type: 'text',
-        text: message,
+        text: question,
       },
     });
 
     return res.status(200).json({
       productId,
       userId,
-      question: message,
+      question,
       answer: resu.result.output.generic[0].text,
       date: new Date(),
     });
