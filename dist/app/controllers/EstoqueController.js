@@ -5,7 +5,8 @@
     const [, productId_] = productId.split(':');
     const [, userId_] = userId.split(':');
 
-    // TODO buscar a disponibilidade do produto baseado do productId_ e no userId_
+    // TODO buscar a disponibilidade do produto no banco de dados
+    // baseado do productId_ e no userId_
     const estoque = 10;
 
     if (estoque > 0) {

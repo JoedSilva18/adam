@@ -29,11 +29,19 @@ class WatsonAssistantController {
       },
     });
 
+    let text;
+
+    if (resu.result.output.generic[0].text) {
+      text = resu.result.output.generic[0].text;
+    } else {
+      text = null;
+    }
+
     return res.status(200).json({
       userId,
       productId,
       question,
-      answer: resu.result.output.generic[0].text,
+      answer: text,
       date: new Date(),
     });
   }
