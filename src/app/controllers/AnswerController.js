@@ -1,8 +1,9 @@
 import Questions from '../schemas/Questions';
 
 class AnswerController {
-  async show(req, res) {
-    const { productId, input } = req.params;
+  async checkQuestion(req, res) {
+    const { productId } = req.params;
+    const { input } = req.body;
 
     const question = await Questions.findOne({
       productId,
@@ -16,7 +17,7 @@ class AnswerController {
     }
 
     return res.status(200).json({
-      result: input,
+      result: '',
     });
   }
 }

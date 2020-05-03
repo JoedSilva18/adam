@@ -37,9 +37,9 @@ routes.post(
   _QuestionController2.default.store
 );
 
-routes.get(
-  '/findQuestion/product/:productId/question/:input',
-  _AnswerController2.default.show
+routes.post(
+  '/checkQuestion/product/:productId',
+  _AnswerController2.default.checkQuestion
 );
 
 exports. default = routes;

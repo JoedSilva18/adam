@@ -37,9 +37,9 @@ routes.post(
   QuestionController.store
 );
 
-routes.get(
-  '/findQuestion/product/:productId/question/:input',
-  AnswerController.show
+routes.post(
+  '/checkQuestion/product/:productId',
+  AnswerController.checkQuestion
 );
 
 export default routes;
