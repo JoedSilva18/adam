@@ -14,8 +14,9 @@ class QuestionController {
   }
 
   async index(req, res) {
-    const questions = await _Questions2.default.find();
+    const { productId } = req.params;
 
+    const questions = await _Questions2.default.find({ productId });
     return res.status(200).json(questions);
   }
 }

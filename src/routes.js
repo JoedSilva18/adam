@@ -37,6 +37,8 @@ routes.post(
   QuestionController.store
 );
 
+routes.get('/getQuestions/product/:productId', QuestionController.index);
+
 routes.post(
   '/checkQuestion/product/:productId',
   AnswerController.checkQuestion
