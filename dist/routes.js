@@ -38,7 +38,7 @@ routes.post(
 );
 
 routes.get(
-  '/storeQuestion/product/:productId/question/:input',
+  '/findQuestion/product/:productId/question/:input',
   _AnswerController2.default.show
 );
 

@@ -9,7 +9,15 @@ class AnswerController {
       question: input,
     });
 
-    return res.status(200).json(question);
+    if (question) {
+      return res.status(200).json({
+        result: question.answer,
+      });
+    }
+
+    return res.status(200).json({
+      result: '',
+    });
   }
 }
 
