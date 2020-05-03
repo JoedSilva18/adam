@@ -3,7 +3,7 @@
 class WatsonAssistantController {
   async index(req, res) {
     const { productId, userId } = req.params;
-    const { message } = req.body;
+    const { question } = req.body;
 
     const assistant = await _WatsonAssistant2.default.getService();
 
@@ -30,7 +30,11 @@ class WatsonAssistantController {
     });
 
     return res.status(200).json({
-      result: resu.result.output.generic[0].text,
+      productId,
+      userId,
+      question: message,
+      answer: resu.result.output.generic[0].text,
+      date: new Date(),
     });
   }
 }
