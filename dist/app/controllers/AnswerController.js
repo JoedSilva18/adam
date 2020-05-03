@@ -16,7 +16,7 @@ class AnswerController {
     }
 
     return res.status(200).json({
-      result: '',
+      result: input,
     });
   }
 }
