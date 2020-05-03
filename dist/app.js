@@ -3,7 +3,7 @@
 var _youch = require('youch'); var _youch2 = _interopRequireDefault(_youch);
 var _express = require('express'); var _express2 = _interopRequireDefault(_express);
 require('express-async-errors');
-
+var _cors = require('cors'); var _cors2 = _interopRequireDefault(_cors);
 var _routes = require('./routes'); var _routes2 = _interopRequireDefault(_routes);
 
 require('./database');
@@ -18,6 +18,7 @@ class App {
   }
 
   middlewares() {
+    this.server.use(_cors2.default.call(void 0, ));
     this.server.use(_express2.default.json());
   }
 
