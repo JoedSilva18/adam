@@ -18,7 +18,16 @@ Faremos uso de uma ferramente disponibilizada na Cloud a IBM conhecida como Wats
 ### [IBM Watson Assistant:]("https://www.ibm.com/cloud/watson-assistant/")
 Serviço que auxilia na criação de assistants inteligentes. No projeto utilizamos para reconhecer a intenção do usuário(Perguntar sobre prazo de entrega, caracteristicas do produto, etc) e entidades(Cor, tamanho, bateria, etc). Para uma otimização no processo foi feita uma categorização nos tipos de perguntas para diferenciar perguntas mais faceis de perguntas mais complexas e que precisam de uma maior atenção.
 
-Dividimos as perguntas em 3 Níveis diferentes:
+O dashboard que usamos dentro do Watson Assistant  apresentado a seguir:
+
+<img src="https://i.imgur.com/CQnjcLu.png" height="460" width="920">
+
+### [IBM Cloud Functions:]("https://developer.ibm.com/api/view/cloudfunctions-prod:cloud-functions#Overview")
+
+Para unir o Watson Assistant ao nosso backend, criamos um script em NodeJS (ibmcloud/index.js) e hospedamos na Cloud Functions da IBM. Link do serviço:
+https://us-south.functions.cloud.ibm.com/api/v1/web/j218996%40dac.unicamp.br_dev/adam/color
+
+##### Dividimos as perguntas em 3 Níveis diferentes:
  - Nível 1: As perguntas são relativamente faceis de responder pois são independentes dos produtos apresentados. Exemplos de perguntas, são:
    - O produto é original?
    - Tem garantia?
