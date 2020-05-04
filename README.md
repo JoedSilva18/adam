@@ -1,8 +1,9 @@
 <p align="center">
 <img src="https://i.imgur.com/xHUt3SP.jpg" height="260" width="320">
+<img src="https://olist.com/wp-content/uploads/2018/04/Logo-01.png" height="260" width="320">
 </p>
 
-# Adam 
+# Adam | Desafio Olist
 
 **Este repositório contém arquivos e códigos que foram criados no prazo de alguns dias apenas para fins de validação e testes da nossa ideia. Em nenhum momento nos preocupamos com a arquitetura por trás para obtermos um sistema mais robusto. Caso a ideia vá pra frente, tudo isso será refeito e reestruturado.**
 
