@@ -65,13 +65,13 @@ Nossa rota principal é `/sendMessage/user/:userId/product/:productId`
  - Método POST
  - No Body da requisição: `{ "question": "Sua pergunta" }`, ex:  `{ "question": "Qual a cor" }`
  - Exemplo de retorno: 
- - `{
+ - ```{
     "userId": "1",
     "productId": "1",
     "question": "qual a cor",
     "answer": "Olá, tudo bem? Segundo as informações presentes no anúncio 'Cor:Preto'. Só temos disponível o que está             descrito    no anúncio. Aguardamos sua compra.",
     "date": "2020-05-03T22:28:37.154Z"
-  }`
+  }```
   - Caso o Adam não encontre uma resposta, o atributo "answer" vem igual a null.
   
   ### Nosso Roadmap
