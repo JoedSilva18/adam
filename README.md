@@ -125,7 +125,7 @@ Nossa rota principal é `/sendMessage/user/:userId/product/:productId`
   
   ### Nosso Roadmap
   <p align="center">
-  <img src="https://i.imgur.com/5t6rEgi.jpg" height="360" width="720">
+  <img src="https://imgur.com/a/FprIcsf.png" height="360" width="720">
   </p>
   
   Enjoy :)
