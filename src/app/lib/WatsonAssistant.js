@@ -6,10 +6,9 @@ class WatsonAssistant {
     const assistant = new AssistantV2({
       version: '2020-04-01',
       authenticator: new IamAuthenticator({
-        apikey: 'FtioZq2albOdRcSS3uFR94zFcMfN1LyzQBIgIYBMnRaO',
+        apikey: process.env.WATSON_APIKEY,
       }),
-      url:
-        'https://api.us-south.assistant.watson.cloud.ibm.com/instances/a394d2bd-5ee7-45aa-89cd-065322c9eb01',
+      url: process.env.WATSON_URL,
     });
 
     return assistant;

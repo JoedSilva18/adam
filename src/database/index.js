@@ -20,13 +20,10 @@ class Database {
   }
 
   mongo() {
-    this.mongoConnection = mongoose.connect(
-      'mongodb+srv://jarvis:uploaddeploy@cluster0-6gbip.mongodb.net/test?retryWrites=true&w=majority',
-      {
-        useNewUrlParser: true,
-        useFindAndModify: true,
-      }
-    );
+    this.mongoConnection = mongoose.connect(process.env.MONGO_URL, {
+      useNewUrlParser: true,
+      useFindAndModify: true,
+    });
   }
 }
 

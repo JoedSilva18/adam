@@ -8,11 +8,11 @@ class WatsonAssistantController {
     const assistant = await WatsonAssistant.getService();
 
     const { result } = await assistant.createSession({
-      assistantId: 'a7f1bb02-970d-4dd7-9e22-c1206ede4d02',
+      assistantId: process.env.WATSON_ASSISTANT_ID,
     });
 
     await assistant.message({
-      assistantId: 'a7f1bb02-970d-4dd7-9e22-c1206ede4d02',
+      assistantId: process.env.WATSON_ASSISTANT_ID,
       sessionId: result.session_id,
       input: {
         message_type: 'text',
@@ -21,7 +21,7 @@ class WatsonAssistantController {
     });
 
     const resu = await assistant.message({
-      assistantId: 'a7f1bb02-970d-4dd7-9e22-c1206ede4d02',
+      assistantId: process.env.WATSON_ASSISTANT_ID,
       sessionId: result.session_id,
       input: {
         message_type: 'text',

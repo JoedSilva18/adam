@@ -90,7 +90,6 @@ async function main(params) {
       );
 
       return { result: '' };
-      break;
     }
 
     case 'SPAM': {
