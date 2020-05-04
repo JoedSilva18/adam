@@ -26,7 +26,8 @@ O dashboard que usamos dentro do Watson Assistant  apresentado a seguir:
   
 ### [IBM Cloud Functions:]("https://developer.ibm.com/api/view/cloudfunctions-prod:cloud-functions#Overview")
 
-Para unir o Watson Assistant ao nosso backend, criamos um script em NodeJS (ibmcloud/index.js) e hospedamos na Cloud Functions da IBM. Link do serviço:
+Para unir o Watson Assistant ao nosso backend, criamos um script em NodeJS (ibmcloud/index.js) e hospedamos na Cloud Functions da IBM. Link do serviço: 
+
 https://us-south.functions.cloud.ibm.com/api/v1/web/j218996%40dac.unicamp.br_dev/adam/color
 
 ##### Dividimos as perguntas em 3 Níveis diferentes:
@@ -36,10 +37,10 @@ https://us-south.functions.cloud.ibm.com/api/v1/web/j218996%40dac.unicamp.br_dev
    - Possui nota fiscal?
    - Qual o prazo de entrega?
   
-  Para responder perguntas nesse nível, já treinamos um modelo usando uma ferramenta que sera detalhada mais pra frente. Portanto, perguntas desse tipo classificamos como faceis devido o fato de valer em todos os cenários.
+    Para responder perguntas nesse nível, já treinamos um modelo usando uma ferramenta que sera detalhada mais pra frente.      Portanto, perguntas desse tipo classificamos como faceis devido o fato de valer em todos os cenários.
   
 - Nível 2: Perguntas desse tipo apresentam um grau maior de dificuldade pois inclui a presença de atributos do produto e por se tratar de uma marketplace, temos N produtos com N atributos diferentes. Com o auxílio do Watson Assistant, conseguimos treinar um modelo para que seja possivel a detecção dos atributos (por exemplo cor, tamanho, bateria, etc). 
-Com esse atributos em mãos, é relativamente percorrer uma lista de atributos do produto(Um Json por exemplo), atrás do valor procurado. Caso esse atributo ainda não esteja lá, é possivel inseri-lo para que futuramente ele ja encontre automaticamente. Exemplos de perguntas: 
+Com esse atributos em mãos, é relativamente percorrer uma lista de atributos do produto(Um Json por exemplo), atrás do valor procurado. Caso esse atributo ainda não esteja lá, é possivel inseri-lo para que futuramente ele ja encontre automaticamente. Exemplos de perguntas:
   - Qual a cor?
   - Qual a autonomia da bateria?
   - Tem flash na camera frontal?
