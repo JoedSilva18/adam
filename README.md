@@ -20,20 +20,20 @@ Serviço que auxilia na criação de assistants inteligentes. No projeto utiliza
 
 Dividimos as perguntas em 3 Níveis diferentes:
  - Nível 1: As perguntas são relativamente faceis de responder pois são independentes dos produtos apresentados. Exemplos de perguntas, são:
-  - O produto é original?
-  - Tem garantia?
-  - Possui nota fiscal?
-  - Qual o prazo de entrega?
+   - O produto é original?
+   - Tem garantia?
+   - Possui nota fiscal?
+   - Qual o prazo de entrega?
   
   Para responder perguntas nesse nível, já treinamos um modelo usando uma ferramenta que sera detalhada mais pra frente. Portanto, perguntas desse tipo classificamos como faceis devido o fato de valer em todos os cenários.
   
 - Nível 2: Perguntas desse tipo apresentam um grau maior de dificuldade pois inclui a presença de atributos do produto e por se tratar de uma marketplace, temos N produtos com N atributos diferentes. Com o auxílio do Watson Assistant, conseguimos treinar um modelo para que seja possivel a detecção dos atributos (por exemplo cor, tamanho, bateria, etc). 
 Com esse atributos em mãos, é relativamente percorrer uma lista de atributos do produto(Um Json por exemplo), atrás do valor procurado. Caso esse atributo ainda não esteja lá, é possivel inseri-lo para que futuramente ele ja encontre automaticamente. Exemplos de perguntas: 
- - Qual a cor?
- - Qual a autonomia da bateria?
- - Tem flash na camera frontal?
+  - Qual a cor?
+  - Qual a autonomia da bateria?
+  - Tem flash na camera frontal?
  
 - Nível 3: Entende-se como o nível mais complexo pois nesse nível as perguntas não foram entendidas pelo assistant ou não foram encontradas no nível anterior. Por apresentar um grau semantico mais complexo, essas perguntas já foram respondidas por um humano anteriormente. Com isso, essas perguntas ficam salvas em um banco e quando solicitado a pergunta em questão é comparada com as perguntas que já foram salvas para verificar uma possivel semelhança. Havendo uma semelhança, a resposta é retornada. Exemplo de perguntas:
- - Da pra instalar o whatsapp?
- - Comprei o meu,estou satisfeito mas agora quero uma capa e película de vidro. Vcs tem?
- - vcs vendem capinha e pelicula para o aparelho?
+  - Da pra instalar o whatsapp?
+  - Comprei o meu,estou satisfeito mas agora quero uma capa e película de vidro. Vcs tem?
+  - vcs vendem capinha e pelicula para o aparelho?
