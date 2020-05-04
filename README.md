@@ -19,9 +19,9 @@ Faremos uso de uma ferramente disponibilizada na Cloud a IBM conhecida como Wats
 Serviço que auxilia na criação de assistants inteligentes. No projeto utilizamos para reconhecer a intenção do usuário(Perguntar sobre prazo de entrega, caracteristicas do produto, etc) e entidades(Cor, tamanho, bateria, etc). Para uma otimização no processo foi feita uma categorização nos tipos de perguntas para diferenciar perguntas mais faceis de perguntas mais complexas e que precisam de uma maior atenção.
 
 O dashboard que usamos dentro do Watson Assistant  apresentado a seguir:
-<center>
+<p align="center">
 <img src="https://i.imgur.com/CQnjcLu.png" height="460" width="920">
-</center>
+</p>
   
 ### [IBM Cloud Functions:]("https://developer.ibm.com/api/view/cloudfunctions-prod:cloud-functions#Overview")
 
@@ -48,15 +48,17 @@ Com esse atributos em mãos, é relativamente percorrer uma lista de atributos d
   - Comprei o meu,estou satisfeito mas agora quero uma capa e película de vidro. Vcs tem?
   - vcs vendem capinha e pelicula para o aparelho?
   
-  <center>
+ <p align="center">
   <img src="https://i.imgur.com/lzRFLSc.jpg" height="360" width="720">
-  </center>
+  </p>
   
 ### Como testar o serviço:
 
 Como o Adam é um serviço, ele foi feito para ser acoplado a um serviço já existente através de um endpoint. Para simular seu funcionamento, vamos tomar como base um celular vendido no Mercado Livre e vamos fazer fazer uma pergunta em um FrontEnd que nó mesmos criamos para o hackathon, disponivel em: https://silvio-ronaldo.github.io/adam-interface/
 
+<p align="center">
 <img src="https://i.imgur.com/fQTyZS5.png" height="360" width="720">
+</p>
 
 Basicamente ao realizar uma pergunta, caos seja Nível 1 ou Nível 2 o sistema já tem autonomia para responder (Isso também depende de como o Watson foi treinado e como fizemos apenas pensando em validar nossa idéia, sua autonomia ainda  baixa) e caso seja de Nível 3, vai depender se a resposta já foi feita anteriormente(O Nível 3 ainda não foi implementado por inteiro, isso está no nosso Roadmap).
 
@@ -96,9 +98,9 @@ Nossa rota principal é `/sendMessage/user/:userId/product/:productId`
   - Caso o Adam não encontre uma resposta, o atributo "answer" vem igual a null.
   
   ### Nosso Roadmap
-  <center>
+  <p align="center">
   <img src="https://i.imgur.com/5t6rEgi.jpg" height="360" width="720">
-  </center>
+  </p>
   
   Enjoy :)
   
