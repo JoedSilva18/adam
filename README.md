@@ -19,9 +19,10 @@ Faremos uso de uma ferramente disponibilizada na Cloud a IBM conhecida como Wats
 Serviço que auxilia na criação de assistants inteligentes. No projeto utilizamos para reconhecer a intenção do usuário(Perguntar sobre prazo de entrega, caracteristicas do produto, etc) e entidades(Cor, tamanho, bateria, etc). Para uma otimização no processo foi feita uma categorização nos tipos de perguntas para diferenciar perguntas mais faceis de perguntas mais complexas e que precisam de uma maior atenção.
 
 O dashboard que usamos dentro do Watson Assistant  apresentado a seguir:
-
+<center>
 <img src="https://i.imgur.com/CQnjcLu.png" height="460" width="920">
-
+</center>
+  
 ### [IBM Cloud Functions:]("https://developer.ibm.com/api/view/cloudfunctions-prod:cloud-functions#Overview")
 
 Para unir o Watson Assistant ao nosso backend, criamos um script em NodeJS (ibmcloud/index.js) e hospedamos na Cloud Functions da IBM. Link do serviço:
@@ -46,6 +47,10 @@ Com esse atributos em mãos, é relativamente percorrer uma lista de atributos d
   - Da pra instalar o whatsapp?
   - Comprei o meu,estou satisfeito mas agora quero uma capa e película de vidro. Vcs tem?
   - vcs vendem capinha e pelicula para o aparelho?
+  
+  <center>
+  <img src="https://i.imgur.com/lzRFLSc.jpg" height="360" width="720">
+  </center>
   
 ### Como testar o serviço:
 
@@ -91,6 +96,9 @@ Nossa rota principal é `/sendMessage/user/:userId/product/:productId`
   - Caso o Adam não encontre uma resposta, o atributo "answer" vem igual a null.
   
   ### Nosso Roadmap
+  <center>
+  <img src="https://i.imgur.com/5t6rEgi.jpg" height="360" width="720">
+  </center>
   
   Enjoy :)
   
