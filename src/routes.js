@@ -37,7 +37,7 @@ routes.post(
 // Exibe os dados das perguntas mais efetuadas
 // (ex: perguntas sobre formas de pagamento, envio de nota fiscal, etc)
 routes.get(
-  '/storeAnalytics/user/:userId/product/:productId',
+  '/getAnalytics/user/:userId/product/:productId',
   AnalyticsController.index
 );
 

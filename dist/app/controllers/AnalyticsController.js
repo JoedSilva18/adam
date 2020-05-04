@@ -81,8 +81,8 @@ class AnalyticsController {
     const { productId, userId } = req.params;
 
     const analytics = await _Analytics2.default.findOne({
-      productId,
-      userId,
+      productId: `productId:${productId}`,
+      userId: `userId:${userId}`,
     });
 
     return res.status(200).json(analytics);
