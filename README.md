@@ -97,6 +97,32 @@ Nossa rota principal é `/sendMessage/user/:userId/product/:productId`
   
   - Caso o Adam não encontre uma resposta, o atributo "answer" vem igual a null.
   
+  ### Obter Estatisticas
+  
+  Com a rota a seguir é possível obter dados relacionados a quantidade de perguntas separador por categorias:
+  `/getAnalytics/user/:userId/product/:productId` Método GET
+  
+  retorno: 
+  ```
+  {
+    "freteEPrazo": 0,
+    "formaPagamento": 1,
+    "NFEGarantia": 2,
+    "originalidade": 0,
+    "caracteristicasProduto": 92,
+    "disponibilidade": 0,
+    "SPAM": 5,
+    "naoIdentificado": 44,
+    "total": 144,
+    "_id": "5eadb98aa6453400212e733a",
+    "productId": "1",
+    "userId": "1",
+    "createdAt": "2020-05-02T18:18:50.524Z",
+    "updatedAt": "2020-05-04T03:10:24.212Z",
+    "__v": 0
+  }
+  ```
+  
   ### Nosso Roadmap
   <p align="center">
   <img src="https://i.imgur.com/5t6rEgi.jpg" height="360" width="720">
